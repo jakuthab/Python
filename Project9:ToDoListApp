@@ -1,0 +1,87 @@
+#1 - Create the list
+number = []
+list_of_tasks = []
+
+remove = True
+add = True
+print()
+
+
+
+def add_task():
+
+    global add
+    global number
+
+    while add == True:
+
+        add_task = input("Do you want to add tasks? type 'yes' or 'no'\n").lower()
+
+        if add_task == "yes":
+            tasks = input("Add a task\n")
+
+        # 1. Creating the to do list 
+            list_of_tasks.append(tasks)
+            
+
+        elif add_task == "no":
+            add = False
+
+        #2. View the ToDO list 
+        print("The list of tasks you have to do is")
+        for task in list_of_tasks:
+            print(task)   
+        
+        else:
+            print("Select 'yes' or 'no'")   
+
+
+#3. Removing items from a to do list
+def remove_tasks(): 
+
+    global remove
+
+    while remove == True:
+        remove_tasks = input("Do you want to remove items?\n").lower() #fix there, 
+
+
+        if remove_tasks == "yes":
+
+            try: 
+                print(f"\nCurrent list of tasks:")
+                for task in list_of_tasks:
+                    print(task)
+                task_to_remove = input("What task do you want to remove from the list? type task from list\n")
+                list_of_tasks.remove(task_to_remove)
+                print(f"Task '{task_to_remove}' removed successfully!")
+                print(f"Updated list of tasks: {list_of_tasks}")
+
+            except ValueError:  # Specify the type of exception
+                print(f"Task '{task_to_remove}' is not in the list")
+                print(f"Available tasks: {task}")
+
+
+        elif remove_tasks == "no": 
+            print("\nFinal list of tasks:")
+            for task in list_of_tasks:
+                print(task)
+                break
+        
+        else: 
+            print("You selected the wrong option - type 'yes' or 'no'")
+            
+
+
+#Add prority to tasks 
+# number = [1,2,3,4,5,6,7,8,9]
+
+# def priority():
+#     priority_tasks = input("Would you like to list your tasks in order of priority?")
+        
+#     if priority_tasks == "yes": 
+#             for tasks in list_of_tasks:
+
+
+
+add_task()
+remove_tasks()
