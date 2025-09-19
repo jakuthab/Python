@@ -3,7 +3,7 @@ import random
 # TODO-1: - Update the word list to use the 'word_list' from hangman_words.py
 from hangman_words import word_list
 
-lives = 6
+lives = 6 
 
 # TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
 from hangman_art import logo
@@ -67,4 +67,5 @@ while not game_over:
     from hangman_art import stages
 
     print(stages[lives])
+
 
