@@ -1,22 +1,32 @@
 
-# Encryption and Decryption project
+# To Do List App
 
 A brief description of what this project does and who it's for
 
-# Caesar Cipher Project – What I Learned
+Manager Project
 
-- I built a **Caesar Cipher program** that can **encrypt** and **decrypt** messages based on a user-specified shift.
-- I used **functions** to organize the code and make it reusable (e.g. `caesar()` function).
-- I learned how to:
-  - **Import from other Python files** using `from art import logo` to display a custom logo.
-  - Handle **user input** for direction (`encode` or `decode`), the message, and the shift number.
-  - Use **lists** to manage the alphabet and handle character shifting.
-  - Manage **non-alphabet characters** (like spaces, symbols, or numbers) so they are not altered in the output.
-  - Apply **modulus (%)** to wrap around the alphabet when shifting letters beyond ‘z’.
-  - Use **control flow** (`if`, `while`) to keep the program running until the user chooses to exit.
-  - Allow the program to **restart automatically** after each run with a simple `yes` or `no` prompt.
+- I created a **simple to-do list** using a Python list to store tasks, which helped me understand basic data structures.
+  
+- I broke the program into **three main functions**:
+  - `addTask()` – to add tasks to the list
+  - `deleteTask()` – to remove tasks
+  - `listTask()` – to display all current tasks  
+  ➤ This taught me how to organize code into logical, reusable parts.
+
+- I implemented a **menu system** using a `while` loop with `if/elif` statements to control program flow and create a simple user interface.
+
+- I added **error handling** using `try/except` blocks to manage invalid user inputs, which introduced me to the concept of defensive programming.
+
+- I practiced **list operations** like `.append()` to add tasks and `.pop()` to remove them.
+
+- **Key takeaways:**
+  - How to structure a small but complete Python program
+  - Working effectively with user input and output
+  - Managing and manipulating list data
+  - Handling errors gracefully
+  - Writing clean, readable, and organized code
 
 ---
 
-This project helped me understand how to apply loops, conditionals, and string manipulation to build a simple encryption tool.  
-It also introduced me to modular programming and improved my ability to write clean, user-interactive Python scripts.
+This project was a great beginner exercise. It used real-world concepts and helped me build a solid foundation in Python.  
+I’m now confident to expand it by adding features like saving tasks to a file or assigning due dates.
