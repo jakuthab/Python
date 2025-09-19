@@ -56,7 +56,7 @@ def main():
     print(len(aliases))
     # Write to a file
     # with open('output.txt', 'w') as file:
-    #     file.write(response.text)
+    # file.write(response.text)
     
 
 
