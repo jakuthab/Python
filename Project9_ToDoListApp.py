@@ -57,24 +57,3 @@ if __name__ == "__main__":
 
     
 
-# First, I created a simple list to store tasks. This taught me how to use Python's basic data structures.
-
-# I broke the program into three main functions:
-
-# addTask() - adds items to my list
-# deleteTask() - removes items
-# listTask() - shows all tasks This taught me how to organize code logically.
-# I built a menu system using a while loop and if/elif statements. I learned how to control program flow and create user interfaces.
-
-# I added error handling with try/except blocks because I realized users might type wrong inputs. This taught me defensive programming.
-
-# I learned about list operations like .append() and .pop() to manage my tasks.
-
-# My biggest takeaways were:
-
-# How to structure a complete program
-# Working with user input/output
-# Managing data in lists
-# Handling errors
-# Writing clean, organized code
-# This project was perfect for me as a beginner because it used real-world concepts and taught me fundamental programming skills. I can now build on this by adding features like saving to files or adding due dates.
