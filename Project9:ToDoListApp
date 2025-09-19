@@ -1,87 +1,58 @@
-#1 - Create the list
-number = []
 list_of_tasks = []
 
 remove = True
 add = True
-print()
 
+def addTask():
+    task = input("Add a task: \n")
+    list_of_tasks.append(task)
+    print(f"Task '{task}' added to the list.")
 
+def deleteTask(): 
+    listTask()
+    try:
+        taskToDelete = int(input("Choose the # of the task you want to delete: "))
+        if 0 <= taskToDelete < len(list_of_tasks):
+            deleted_task = list_of_tasks.pop(taskToDelete)
+            print(f"Task '{deleted_task}' has been deleted.")
+        else:
+            print(f"Task #{taskToDelete} was not found")
+    except:
+        print("Invalid input")
 
-def add_task():
+def listTask():
+    if not list_of_tasks:
+        print("There are no tasks currently.")
+    else:
+        print("Current Tasks:")
+        for index, task in enumerate(list_of_tasks):
+            print(f"Task #{index}. {task}")
 
-    global add
-    global number
+if __name__ == "__main__":
+    print("Welcome to the To Do List App:")
 
     while add == True:
+        print("\n")
+        print("----------------------------------------------------------")
+        print("Choose one of the following options\n")
+        print("1. Add a Task")
+        print("2. Delete a Task")
+        print("3. List Tasks")
+        print("4. Quit")
 
-        add_task = input("Do you want to add tasks? type 'yes' or 'no'\n").lower()
+        choice = input("Enter your choice between 1,2,3 or 4\n")
 
-        if add_task == "yes":
-            tasks = input("Add a task\n")
-
-        # 1. Creating the to do list 
-            list_of_tasks.append(tasks)
-            
-
-        elif add_task == "no":
-            add = False
-
-        #2. View the ToDO list 
-        print("The list of tasks you have to do is")
-        for task in list_of_tasks:
-            print(task)   
-        
+        if (choice == "1"):
+            addTask()
+        elif (choice == "2"):
+            deleteTask()
+        elif (choice == "3"):
+            listTask()
+        elif (choice == "4"):
+            break
         else:
-            print("Select 'yes' or 'no'")   
+            print("Invalid input. Please try again")
 
+    print("Good Bye")
 
-#3. Removing items from a to do list
-def remove_tasks(): 
-
-    global remove
-
-    while remove == True:
-        remove_tasks = input("Do you want to remove items?\n").lower() #fix there, 
-
-
-        if remove_tasks == "yes":
-
-            try: 
-                print(f"\nCurrent list of tasks:")
-                for task in list_of_tasks:
-                    print(task)
-                task_to_remove = input("What task do you want to remove from the list? type task from list\n")
-                list_of_tasks.remove(task_to_remove)
-                print(f"Task '{task_to_remove}' removed successfully!")
-                print(f"Updated list of tasks: {list_of_tasks}")
-
-            except ValueError:  # Specify the type of exception
-                print(f"Task '{task_to_remove}' is not in the list")
-                print(f"Available tasks: {task}")
-
-
-        elif remove_tasks == "no": 
-            print("\nFinal list of tasks:")
-            for task in list_of_tasks:
-                print(task)
-                break
-        
-        else: 
-            print("You selected the wrong option - type 'yes' or 'no'")
-            
-
-
-#Add prority to tasks 
-# number = [1,2,3,4,5,6,7,8,9]
-
-# def priority():
-#     priority_tasks = input("Would you like to list your tasks in order of priority?")
-        
-#     if priority_tasks == "yes": 
-#             for tasks in list_of_tasks:
-
-
-
-add_task()
-remove_tasks()
+    
