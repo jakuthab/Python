@@ -1,0 +1,15 @@
+print("Welcome to the tip calculator!")
+Tip = True
+
+while Tip:
+    bill = float(input("What was the total bill? $"))
+    tip = int(input("What percentage tip would you like to give? 10, 12 or 15 "))
+    people = int(input("How many people to split the bill? "))
+    tip_per = float(tip/100)
+    bill_per_person =float(bill/people)+(bill*tip_per)/people
+    final_amount=round(bill_per_person,2)
+
+    print(f"Each person should pay:${final_amount}")
+
+#Added a while loop for continuity
+#I struggled to get the answer to 2 decimal place then I read up on Data Types in Python and I was able to get the float interger for the decimals 
