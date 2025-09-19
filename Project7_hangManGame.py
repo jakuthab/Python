@@ -68,39 +68,3 @@ while not game_over:
 
     print(stages[lives])
 
-# Here's what I learned from this Hangman game code:
-
-# Imports & Modules:
-
-# Using multiple Python files (modular programming)
-# Importing specific components from other files
-# Using the random module
-# Lists & Strings:
-
-# String manipulation
-# List operations
-# Converting strings to lists and vice versa
-# Using string methods like .lower()
-# Control Flow:
-
-# While loops for game continuation
-# If/else conditions for game logic
-# Using boolean flags (game_over)
-# Variables & State Management:
-
-# Tracking game state (lives, correct_letters)
-# Using placeholder variables
-# Managing multiple variables simultaneously
-# Functions:
-
-# Using built-in functions (len(), input())
-# Working with random.choice()
-# User Interface:
-
-# Creating ASCII art displays
-# Formatted string literals (f-strings)
-# User input handling
-# Clear feedback messages
-# This project helped me understand how to build an interactive game while implementing fundamental Python concepts in a practical way.
-
-
